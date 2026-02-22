@@ -1,7 +1,25 @@
 {
   "name": "sum-ai",
-  "module": "index.ts",
+  "version": "0.1.0",
+  "description": "AI-powered sum function using LLM APIs",
   "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": ["dist"],
+  "scripts": {
+    "build": "bun build ./index.ts --outdir ./dist --target node --format esm && bunx tsc --project tsconfig.build.json",
+    "typecheck": "bunx tsc --noEmit",
+    "test": "bun test",
+    "prepublishOnly": "bun run build"
+  },
   "devDependencies": {
     "@types/bun": "latest"
   },
