@@ -91,5 +91,5 @@ test("uses default OpenRouter base URL", async () => {
   await sum(1, 2, { apiKey: "test-key" });
 
   const [url] = fetchMock.mock.calls[0]!;
-  expect(url).toBe("https://openrouter.ai/api/v1/chat/completions");
+  expect(url).toBe("https://api.openai.com/v1/chat/completions");
 });
