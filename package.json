@@ -1,6 +1,6 @@
 {
   "name": "sum-ai",
-  "version": "0.1.0",
+  "version": "1.0.1",
   "description": "AI-powered sum function using LLM APIs",
   "repository": {
     "type": "git",
@@ -17,7 +17,9 @@
       "default": "./dist/index.js"
     }
   },
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "bun build ./index.ts --outdir ./dist --target node --format esm && bunx tsc --project tsconfig.build.json",
     "typecheck": "bunx tsc --noEmit",
