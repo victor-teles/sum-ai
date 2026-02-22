@@ -2,6 +2,10 @@
   "name": "sum-ai",
   "version": "0.1.0",
   "description": "AI-powered sum function using LLM APIs",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/victor-teles/sum-ai"
+  },
   "type": "module",
   "main": "./dist/index.js",
   "module": "./dist/index.js",
